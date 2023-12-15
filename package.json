@@ -1,0 +1,50 @@
+{
+  "name": "helix-eye",
+  "version": "'",
+  "description": "Helix Eye is an app that consumes the NASA's API to display their records",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:client": "webpack --config webpack.config.client.js",
+    "build:server": "node ./esbuild.config.server.mjs",
+    "build:dev": "NODE_ENV=development npm run build:server && node dist/index.js",
+    "server": "nodemon --ext ts --exec \"npm run build:dev\"",
+    "start": "npm run build:client && npm run server"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-regular-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.1",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.3.100",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.4",
+    "@types/react-dom": "^18.2.17",
+    "@types/styled-components": "^5.1.34",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "esbuild": "^0.19.9",
+    "eslint": "^8.55.0",
+    "eslint-config-standard-with-typescript": "^42.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.4.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.4",
+    "nodemon": "^3.0.2",
+    "swc-loader": "^0.2.3",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
