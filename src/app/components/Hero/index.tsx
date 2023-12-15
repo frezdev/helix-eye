@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import { StyledHero } from './styles'
 
-const LOGO_IMAGE = "https://i.imgur.com/w9Smf8E.png"
-const LOGO_IMAGE_WIDE = "https://i.imgur.com/7D6PLq3.png"
+const LOGO_IMAGE = 'https://i.imgur.com/w9Smf8E.png'
+const LOGO_IMAGE_WIDE = 'https://i.imgur.com/7D6PLq3.png'
 
 export const Hero = () => {
   return (

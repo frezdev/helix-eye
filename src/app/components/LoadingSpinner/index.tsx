@@ -1,5 +1,5 @@
-import React from 'react';
-import { Spinner, SpinnerLayout } from './styles';
+import React from 'react'
+import { Spinner, SpinnerLayout } from './styles'
 
 export const LoadingSpinner = () => (
   <SpinnerLayout>
@@ -10,4 +10,4 @@ export const LoadingSpinner = () => (
       <div />
     </Spinner>
   </SpinnerLayout>
-);
+)

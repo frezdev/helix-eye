@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const StyledHighlitedContent = styled.section`
   margin: 4rem 2rem;
@@ -7,7 +7,7 @@ export const StyledHighlitedContent = styled.section`
     font-weight: bold;
     font-size: 1.5rem;
   }
-  
+
   & > .message {
     margin-top: 2rem;
     font-size: 1.125rem;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const MenuButton = styled.button`
   display: ${({ hidden }) => hidden ? 'none' : 'block'};
@@ -25,7 +25,7 @@ export const MenuContainer = styled.menu`
   height: 100vh;
   position: fixed;
   top: 0;
-  right: ${({hidden}) => hidden ? 'calc(-300px - 4rem)' : '0px'};
+  right: ${({ hidden }) => hidden ? 'calc(-300px - 4rem)' : '0px'};
   z-index: 1;
   transition: 200ms;
   background: #2646A6;

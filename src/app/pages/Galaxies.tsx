@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { GalaxiesLayout } from '../components/GalaxiesLayout';
-import { LoadingSpinner } from '../components/LoadingSpinner';
-import { LOADING_STATUS, ERROR_STATUS, useFetchGalaxiesInfo } from '../hooks/useFetchGalaxiesInfo';
+import React from 'react'
+import styled from 'styled-components'
+import { GalaxiesLayout } from '../components/GalaxiesLayout'
+import { LoadingSpinner } from '../components/LoadingSpinner'
+import { LOADING_STATUS, ERROR_STATUS, useFetchGalaxiesInfo } from '../hooks/useFetchGalaxiesInfo'
 
 const GalaxiesPageWrapper = styled.div`
   display: flex;
@@ -12,7 +12,6 @@ const GalaxiesPageWrapper = styled.div`
 `
 
 export const Galaxies = () => {
-
   const { galaxies, requestStatus } = useFetchGalaxiesInfo()
 
   const renderLayout = () => {
@@ -26,5 +25,5 @@ export const Galaxies = () => {
       <h1>Galaxias</h1>
       {renderLayout()}
     </GalaxiesPageWrapper>
-  );
+  )
 }

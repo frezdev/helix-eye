@@ -1,9 +1,9 @@
-import React from 'react';
-import { GalaxyCard } from '../GalaxyCard';
-import { StyledGalaxiesLayout } from './styles';
-import { GalaxiesProps } from './types'
+import React from 'react'
+import { GalaxyCard } from '../GalaxyCard'
+import { StyledGalaxiesLayout } from './styles'
+import { type GalaxyItem } from '@/app/api/types'
 
-export const GalaxiesLayout = ({ galaxies }: GalaxiesProps) => {
+export const GalaxiesLayout = ({ galaxies }: { galaxies: GalaxyItem[] }) => {
   return (
     <StyledGalaxiesLayout>
       {

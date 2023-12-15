@@ -1,11 +1,11 @@
-import React from 'react';
-import { GalaxyData } from '../GalaxiesLayout/types'
-import { faImage, faVolumeUp, faVideo } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { GalaxyCardContainer } from './styles';
+import React from 'react'
+import { faImage, faVolumeUp, faVideo } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { GalaxyCardContainer } from './styles'
+import { type GalaxyItem } from '@/app/api/types'
 
 interface GalaxyCardProps {
-  galaxy: GalaxyData,
+  galaxy: GalaxyItem
 }
 
 export const GalaxyCard = ({ galaxy }: GalaxyCardProps) => {
@@ -14,15 +14,15 @@ export const GalaxyCard = ({ galaxy }: GalaxyCardProps) => {
 
   const renderMediaTypeIcon = (mediaType: string) => {
     const mediaIcon = {
-      'image': faImage,
-      'video': faVideo,
-      'audio': faVolumeUp
+      image: faImage,
+      video: faVideo,
+      audio: faVolumeUp
     }
 
     const mediaTranslation = {
-      'image': 'Imagen',
-      'video': 'Video',
-      'audio': 'Audio'
+      image: 'Imagen',
+      video: 'Video',
+      audio: 'Audio'
     }
 
     const icon = mediaIcon[mediaType]

@@ -1,6 +1,6 @@
-import React from 'react';
-import { LandingCard } from '../LandingCard';
-import { StyledHighlitedContent } from './styles';
+import React from 'react'
+import { LandingCard } from '../LandingCard'
+import { StyledHighlitedContent } from './styles'
 
 export const HighlightedContent = () => {
   return (
@@ -16,5 +16,5 @@ export const HighlightedContent = () => {
         <LandingCard data="60" message="años de historia" />
       </div>
     </StyledHighlitedContent>
-  );
-};
+  )
+}

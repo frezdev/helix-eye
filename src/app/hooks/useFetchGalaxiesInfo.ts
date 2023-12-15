@@ -1,25 +1,25 @@
-import { useEffect, useState } from "react"
-import { getGalaxiesJSON } from "../api"
+import { useEffect, useState } from 'react'
+import { getGalaxiesJSON } from '../api'
+import { type GalaxyItem } from '../api/types'
 
-export const COMPLETED_STATUS = "COMPLETED"
-export const LOADING_STATUS = "LOADING"
-export const ERROR_STATUS = "ERROR"
+export const COMPLETED_STATUS = 'COMPLETED'
+export const LOADING_STATUS = 'LOADING'
+export const ERROR_STATUS = 'ERROR'
 
 export const useFetchGalaxiesInfo = () => {
-
   const [requestStatus, setRequestStatus] = useState(LOADING_STATUS)
-  const [galaxies, setGalaxies] = useState([])
+  const [galaxies, setGalaxies] = useState<GalaxyItem[]>([])
 
   useEffect(() => {
     setRequestStatus(LOADING_STATUS)
     getGalaxiesJSON()
       .then(data => {
-        setGalaxies(data)
+        setGalaxies([...data])
         setRequestStatus(COMPLETED_STATUS)
       })
       .catch(err => {
         setRequestStatus(ERROR_STATUS)
-        console.error("Error in request galaxies", err)
+        console.error('Error in request galaxies', err)
       })
   }, [])
 
