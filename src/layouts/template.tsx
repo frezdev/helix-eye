@@ -1,7 +1,5 @@
-import React from 'react'
-
-export const Template = ({ children }) => {
-  return (
+export const Template = ({ children, stylesTag, scriptContent }) => {
+  return (/* html */`
     <html lang="en">
       <head>
         <meta charSet='UTF-8' />
@@ -12,12 +10,15 @@ export const Template = ({ children }) => {
         <link rel="stylesheet" href="/style.css" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet" />
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        ${stylesTag}
+        ${scriptContent ? `<script id="server-script" defer>${scriptContent}</script>` : ''}
         <title>Helix App</title>
       </head>
 
       <body>
-        <div id="app">{children}</div>
+        <div id="app">${children}</div>
+        <script src="/bundle.js" defer></script>
       </body>
-    </html>
+    </html>`
   )
 }

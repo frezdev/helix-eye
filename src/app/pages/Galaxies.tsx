@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import styled from 'styled-components'
 import { GalaxiesLayout } from '../components/GalaxiesLayout'
 
@@ -13,7 +13,9 @@ export const Galaxies = () => {
   return (
     <GalaxiesPageWrapper>
       <h1>Galaxias</h1>
-      <GalaxiesLayout />
+      <Suspense fallback={<h1>Cargando...</h1>}>
+        <GalaxiesLayout />
+      </Suspense>
     </GalaxiesPageWrapper>
   )
 }

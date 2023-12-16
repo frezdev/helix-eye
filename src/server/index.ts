@@ -18,11 +18,11 @@ app.get('/galaxias', async (req: Request, res: Response) => {
   }
   const scriptContent = `globalThis.__INITIAL_PROPS = ${JSON.stringify(initialProps)}`
   globalThis.__INITIAL_PROPS = JSON.stringify(initialProps)
-  render({ url: req.url, response: res, scriptContent })
+  res.status(200).send(render({ url: req.url, scriptContent }))
 })
 
 app.get('*', (req: Request, res: Response) => {
-  render({ url: req.url, response: res })
+  res.status(200).send(render({ url: req.url }))
 })
 
 app.listen(config.PORT, () => {
