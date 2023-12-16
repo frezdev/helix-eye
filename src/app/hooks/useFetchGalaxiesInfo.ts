@@ -8,7 +8,7 @@ export const ERROR_STATUS = 'ERROR'
 
 export const useFetchGalaxiesInfo = () => {
   const [requestStatus, setRequestStatus] = useState(LOADING_STATUS)
-  const [galaxies, setGalaxies] = useState<GalaxyItem[]>([])
+  const [galaxies, setGalaxies] = useState<GalaxyItem[]>()
 
   useEffect(() => {
     setRequestStatus(LOADING_STATUS)

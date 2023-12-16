@@ -1,7 +1,7 @@
 import React from 'react'
 import { hydrateRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-import { Template } from '../server/render/template'
+import { Template } from '../layouts/template'
 import { App } from './containers/App'
 import './assets/favicon.ico'
 

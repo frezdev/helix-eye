@@ -5,11 +5,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:client": "webpack --config webpack.config.client.js",
-    "build:server": "node ./esbuild.config.server.mjs",
-    "build:dev": "NODE_ENV=development npm run build:server && node dist/index.js",
-    "server": "nodemon --ext ts --exec \"npm run build:dev\"",
-    "start": "npm run build:client && npm run server"
+    "build-client": "webpack --config webpack.config.client.js",
+    "build-server": "node ./esbuild.config.server.mjs",
+    "build": "NODE_ENV=production npm run build-client && npm run build-server",
+    "build-dev": "NODE_ENV=development npm run build-server && node --inspect dist/index.js",
+    "dev": "nodemon --ext ts --exec \"npm run build-dev\"",
+    "start": "NODE_ENV=production npm run build && NODE_ENV=production node dist/index.js",
+    "lint": "eslint . --ext .ts,.tsx --fix"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",

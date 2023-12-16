@@ -39,7 +39,7 @@ export const GalaxyCard = ({ galaxy }: GalaxyCardProps) => {
   return (
     <GalaxyCardContainer>
       <h3 className='title'>{galaxyData.title}</h3>
-      <img src={galaxyImage} alt={galaxyData.title} />
+      <img src={galaxyImage} loading='lazy' alt={galaxyData.title} />
       <div className="info-container">
         {renderMediaTypeIcon(galaxyData.media_type ?? '')}
         <div className='keyword-container'>
